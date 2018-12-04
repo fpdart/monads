@@ -11,7 +11,7 @@ Result<Success<void>, Failure<T>> Err<T>(T _) =>
 /**
  * 
  *     toResultOr<Null, Exception>(() => throw Exception('q')); // Failure<Exception<String>>
- *     toResultOr<Null, String>(() => throw Exception(1), failure: 'My message'); // Success<String> 
+ *     toResultOr<Null, String>(() => throw Exception(1), failure: 'My message'); // Failure<String> 
  * 
  */
 Result<Success<S>, Failure<F>> toResultOr<S, F>(Function f, {F failure: null}) {
